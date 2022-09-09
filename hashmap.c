@@ -109,15 +109,16 @@ Pair * searchMap(HashMap * map,  char * key)
     }
     i++;
     cont++;
+    if(cont == map->capacity)
+    {
+      break;
+    }
     if(i == map->capacity)
     {
       i=0;
       
     }
-    if(cont == map->capacity)
-    {
-      break;
-    }
+    
   }
   return NULL;
 }
