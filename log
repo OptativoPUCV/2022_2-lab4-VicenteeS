@@ -90,3 +90,9 @@ hashmap.c:109:11: error: ‘cont’ may be used uninitialized in this function [
 cc1: all warnings being treated as errors
 Compilation failed
 e2f546b
+Fri 09 Sep 2022 01:26:39 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 30/70
+813c6dc
