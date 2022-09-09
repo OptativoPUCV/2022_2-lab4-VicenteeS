@@ -68,3 +68,14 @@ Fri 09 Sep 2022 01:15:49 PM UTC:
  tests:  5|4
 total_score: 30/70
 f60fe42
+Fri 09 Sep 2022 01:26:02 PM UTC: 
+ hashmap.c | 24 +++++++++++++++++++++---
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:98:3: error: ‘cont’ undeclared (first use in this function)
+   98 |   cont++;
+      |   ^~~~
+hashmap.c:98:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+61a2883
