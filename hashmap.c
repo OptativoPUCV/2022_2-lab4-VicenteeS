@@ -100,7 +100,7 @@ Pair * searchMap(HashMap * map,  char * key)
   {
     if((map->buckets[i]->key == NULL) || (map->buckets == NULL))
     {
-      return(map->buckets[i]);
+      return(NULL);
     }
     if(is_equal(map->buckets[i]->key, key))
     {
