@@ -108,10 +108,11 @@ Pair * searchMap(HashMap * map,  char * key)
       return(map->buckets[i]);
     }
     i++;
+    cont++;
     if(i == map->capacity)
     {
       i=0;
-      cont++;
+      
     }
     if(cont == map->capacity)
     {
