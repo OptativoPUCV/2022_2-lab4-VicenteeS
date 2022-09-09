@@ -39,8 +39,10 @@ int is_equal(void* key1, void* key2){
 }
 
 
-void insertMap(HashMap * map, char * key, void * value) {
-
+void insertMap(HashMap * map, char * key, void * value) 
+{
+  map->current = hash(key, map->capacity);
+  
 
 }
 
@@ -65,8 +67,9 @@ HashMap * createMap(long capacity)
   return map;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-
+void eraseMap(HashMap * map,  char * key) 
+{    
+  
 
 }
 
