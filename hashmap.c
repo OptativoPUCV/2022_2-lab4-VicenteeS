@@ -53,21 +53,16 @@ void enlarge(HashMap * map) {
 
 HashMap * createMap(long capacity) 
 {
-  info_msg("inicializando la tabla...");
-HashMap * map = (HashMap *)malloc(sizeof(HashMap));
-map->buckets = (Pair **) calloc (10,sizeof(Pair *));
-map->capacity = 10;
+  HashMap *map = (HashMap *) malloc (sizeof(HashMap));
 
-char words[6][8]={"casa","carro","saco","olla","cesa","case"};
-int hashs[6]={8,7,6,0,4,2}; //using function in hashmap.c
-int i;
-for(i=0;i<6;i++)
-    map->buckets[hashs[i]] = createPair(_strdup(words[i]),_strdup("exist"));
-
-map->size=6; 
+  map->buckets = (Pair **) calloc (capacity,sizeof(Pair *));
+  /*Da lo mismo si se almacena sizeof(Pair) o sizof(Pair *), ya que 
+  almacena igual cantidad de bytes*/
+  map->capacity = capacity;
+  map->size = 0;
+  map->current = -1;//Se debería poner en cualquier posicion
   
-  
-  return NULL;
+  return map;
 }
 
 void eraseMap(HashMap * map,  char * key) {    

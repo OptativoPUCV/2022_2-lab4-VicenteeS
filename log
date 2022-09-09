@@ -50,3 +50,9 @@ hashmap.c:56:3: note: previous implicit declaration of ‘info_msg’ was here
 cc1: all warnings being treated as errors
 Compilation failed
 1a47540
+Fri 09 Sep 2022 12:59:23 PM UTC: 
+ hashmap.c | 19 +++++++------------
+ 1 file changed, 7 insertions(+), 12 deletions(-)
+ tests:  1|5
+total_score: 10/70
+e5d6b71
