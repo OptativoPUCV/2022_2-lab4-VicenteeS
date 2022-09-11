@@ -150,8 +150,15 @@ Pair * firstMap(HashMap * map) {
     return NULL;
   }
   
- 
-  while(1)
+    for(i=0; i<map->capacity; i++)
+    {
+      if(map->buckets[i] != NULL)
+      {
+        map->current = i;
+        return (map->buckets[i]);
+      }
+    }
+  /*while(1)
   {
     if(map->buckets[i] != NULL)
     {
@@ -165,7 +172,7 @@ Pair * firstMap(HashMap * map) {
     if(i == map->capacity)
     {
       return NULL;
-    }
+    }*/
   }
   return NULL;
 }
