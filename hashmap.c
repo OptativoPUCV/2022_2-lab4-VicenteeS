@@ -172,11 +172,20 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
   size_t i;
+  map->current++;
   if(map->size > 0)
   {
-    map->current++;
-    i = map->current;
-    return(map->buckets[i]);
+    for(i = map->current; i < map->capacity; i++)
+    {
+      if(map->buckets[i] != NULL)
+      {
+        if(map->buckets[i]->key != NULL)
+        {
+          map->current = i;
+          return map->buckets[i];  
+        }
+      }
+    }
   }
   return NULL;
 }
