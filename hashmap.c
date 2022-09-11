@@ -44,8 +44,7 @@ void insertMap(HashMap * map, char * key, void * value)
   Pair *newPair = createPair(key, value);
   size_t i = hash(key, map->capacity);
   //size_t es el mismo tipo de variable que un long long
-  
-  
+
   while(1)
   {
     if(map->buckets[i] == NULL) 
@@ -66,9 +65,23 @@ void insertMap(HashMap * map, char * key, void * value)
 }
 
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
+  enlarge_called = 1; //no borrar (testing purposes)
 
+  Pair **old_buckets = map->buckets;
 
+  map->capacity *= 2;
+
+  map->buckets = (Pair **) malloc (sizeof(Pair *) * map->capacity);
+
+  map->size = 0;
+
+  for(size_t i = 0; i < (map->capacity/2); i++)
+  {
+    if(old_buckets[i] != NULL)
+    {
+      insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+    }
+  }
 }
 
 
@@ -165,7 +178,6 @@ Pair * firstMap(HashMap * map) {
       }
     }
   }
-  
   
   return NULL;
 }
