@@ -330,3 +330,14 @@ Sun 11 Sep 2022 08:40:56 PM UTC:
  tests:  13|2
 total_score: 50/70
 fc06122
+Sun 11 Sep 2022 08:42:32 PM UTC: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:182:1: error: control reaches end of non-void function [-Werror=return-type]
+  182 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+9666b13

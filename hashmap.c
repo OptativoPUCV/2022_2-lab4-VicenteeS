@@ -172,7 +172,11 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
   size_t i;
-  map->current++;
-  i = map->current;
-  return(map->buckets[i]);
+  if(map->size > 0)
+  {
+    map->current++;
+    i = map->current;
+    return(map->buckets[i]);
+  }
+  
 }
