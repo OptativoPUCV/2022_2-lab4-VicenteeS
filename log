@@ -147,3 +147,8 @@ hashmap.c:128:13: error: ‘HashMap’ {aka ‘struct HashMap’} has no member 
       |             buckets
 Compilation failed
 dc38409
+Sun 11 Sep 2022 06:53:45 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+894e0b7
