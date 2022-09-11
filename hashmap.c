@@ -98,10 +98,10 @@ Pair * searchMap(HashMap * map,  char * key)
   size_t cont=0;
   while(1)
   {
-    if((map->buckets[i]->key == NULL) && (map->buckets == NULL))
+    /*if((map->buckets[i]->key == NULL) && (map->buckets == NULL))
     {
       return(NULL);
-    }
+    }*/
     if(is_equal(map->buckets[i]->key, key))
     {
       map->current = i;
