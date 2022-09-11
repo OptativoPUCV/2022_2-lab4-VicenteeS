@@ -125,7 +125,7 @@ Pair * searchMap(HashMap * map,  char * key)
     {
       return NULL;
     }
-    if(map->buckets[i]->key == NULL)
+    if(map->buckets[i] == NULL)
     {
       return NULL;
     }
