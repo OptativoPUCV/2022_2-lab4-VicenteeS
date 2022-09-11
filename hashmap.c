@@ -149,10 +149,13 @@ Pair * firstMap(HashMap * map) {
   {
     return NULL;
   }
+ 
+  
   while(1)
   {
     if(map->buckets[i] != NULL)
     {
+      map->current = i;
       return (map->buckets[i]);
     }
     else
