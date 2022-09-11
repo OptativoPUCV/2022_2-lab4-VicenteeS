@@ -145,6 +145,10 @@ Pair * firstMap(HashMap * map) {
   {
     return NULL;
   }
+  if(map->buckets == NULL)
+  {
+    return NULL;
+  }
   while(1)
   {
     if(map->buckets[i] != NULL)
