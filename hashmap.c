@@ -101,12 +101,10 @@ Pair * searchMap(HashMap * map,  char * key)
   {
     if(map->buckets == NULL)
     {
-      //return NULL;
       break;
     }
     if(map->buckets[i] == NULL)
     {
-      //return NULL;
       break;
     }
     if(is_equal(map->buckets[i]->key, key))
@@ -124,7 +122,6 @@ Pair * searchMap(HashMap * map,  char * key)
       }
       if(cont == map->capacity)
       {
-        //return NULL;
         break;
       }
     }
