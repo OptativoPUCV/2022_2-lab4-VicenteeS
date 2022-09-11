@@ -176,7 +176,7 @@ Pair * nextMap(HashMap * map) {
   {
     map->current++;
     i = map->current;
-    return(map->buckets[i]->value);
+    return(map->buckets[i]);
   }
   return NULL;
 }
