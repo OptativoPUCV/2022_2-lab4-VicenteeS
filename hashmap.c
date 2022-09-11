@@ -136,7 +136,7 @@ Pair * searchMap(HashMap * map,  char * key)
 }
 
 Pair * firstMap(HashMap * map) {
-  size_t i = -1;
+  size_t i = 0;
   if(map->size == 0)
   {
     return NULL;
