@@ -98,7 +98,7 @@ Pair * searchMap(HashMap * map,  char * key)
   size_t cont=0;
   while(1)
   {
-    if((map->buckets[i]->key == NULL) || (map->buckets == NULL))
+    if((map->buckets[i]->key == NULL) && (map->buckets == NULL))
     {
       return(NULL);
     }
@@ -118,7 +118,6 @@ Pair * searchMap(HashMap * map,  char * key)
       i=0;
       
     }
-    
   }
   return NULL;
 }
