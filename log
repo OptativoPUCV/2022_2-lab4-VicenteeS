@@ -136,3 +136,14 @@ Sun 11 Sep 2022 05:55:55 PM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 9424b98
+Sun 11 Sep 2022 06:53:31 PM UTC: 
+ hashmap.c | 35 ++++++++++++++++++++++++++++++++---
+ 1 file changed, 32 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:128:13: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘buckeys’; did you mean ‘buckets’?
+  128 |     if(map->buckeys[i]->key == NULL)
+      |             ^~~~~~~
+      |             buckets
+Compilation failed
+dc38409

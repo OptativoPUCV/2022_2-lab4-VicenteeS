@@ -96,12 +96,12 @@ Pair * searchMap(HashMap * map,  char * key)
 {   
   size_t i = hash(key, map->capacity);
   size_t cont=0;
-  while(1)
+  /*while(1)
   {
-    /*if((map->buckets[i]->key == NULL) && (map->buckets == NULL))
+    if((map->buckets[i]->key == NULL) || (map->buckets == NULL))
     {
       return(NULL);
-    }*/
+    }
     if(is_equal(map->buckets[i]->key, key))
     {
       map->current = i;
@@ -117,6 +117,35 @@ Pair * searchMap(HashMap * map,  char * key)
     {
       i=0;
       
+    }
+  }*/
+  while(1)
+  {
+    if(map->buckets == NULL)
+    {
+      return NULL;
+    }
+    if(map->buckeys[i]->key == NULL)
+    {
+      return NULL;
+    }
+    if(is_equal(map->buckets[i]->key, key))
+    {
+      map->current = i;
+      return(map->buckets[i]);
+    }
+    else
+    {
+      i++;
+      cont++;
+      if(i == map->capacity)
+      {
+        i=0;
+      }
+      if(cont == map->capacity)
+      {
+        return NULL;
+      }
     }
   }
   return NULL;
