@@ -150,19 +150,18 @@ Pair * firstMap(HashMap * map) {
   {
     return NULL;
   }
-  
-  for(i=0; i<map->capacity; i++)
+  if(map->size > 0)
   {
-    if(map->buckets[i]->value != NULL)
+    for(i=0; i < map->capacity; i++)
     {
-      if(map->buckets[i]->key != NULL)
+      if(map->buckets[i] != NULL)
       {
         map->current = i;
         return (map->buckets[i]);
       }
-      
     }
   }
+  
   
   return NULL;
 }
