@@ -265,3 +265,16 @@ Sun 11 Sep 2022 08:09:45 PM UTC:
  tests:  12|2
 total_score: 50/70
 a06d37a
+Sun 11 Sep 2022 08:13:21 PM UTC: 
+ hashmap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:177:26: error: expected ‘;’ before ‘}’ token
+  177 |   return(map->buckets[i])
+      |                          ^
+      |                          ;
+  178 | }
+      | ~                         
+Compilation failed
+9733e16

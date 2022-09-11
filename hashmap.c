@@ -171,6 +171,8 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
-    return NULL;
+  size_t i;
+  map->current++;
+  i = map->current;
+  return(map->buckets[i])
 }
