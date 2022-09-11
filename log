@@ -224,3 +224,8 @@ hashmap.c:150:8: error: null argument where non-null required (argument 2) [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 8d39555
+Sun 11 Sep 2022 08:02:18 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+d36b98b

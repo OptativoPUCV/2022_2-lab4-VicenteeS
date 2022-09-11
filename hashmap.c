@@ -147,7 +147,7 @@ Pair * firstMap(HashMap * map) {
   }
   while(1)
   {
-    if(strcmp(map->buckets[i]->key, NULL) == 0)
+    if(map->buckets[i]->key == NULL)
     {
       return (map->buckets[i]);
     }
