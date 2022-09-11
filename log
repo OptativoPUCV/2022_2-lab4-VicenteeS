@@ -213,3 +213,14 @@ Sun 11 Sep 2022 07:11:11 PM UTC:
  tests:  12|2
 total_score: 50/70
 600a23c
+Sun 11 Sep 2022 07:13:30 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:150:8: error: null argument where non-null required (argument 2) [-Werror=nonnull]
+  150 |     if(strcmp(map->buckets[i]->key, NULL) == 0)
+      |        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8d39555
