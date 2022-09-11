@@ -182,3 +182,17 @@ Sun 11 Sep 2022 07:01:19 PM UTC:
  tests:  11|2
 total_score: 50/70
 a6aca1d
+Sun 11 Sep 2022 07:08:44 PM UTC: 
+ hashmap.c | 25 ++++++++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:140:16: error: comparison between pointer and integer [-Werror]
+  140 |   if(map->size == NULL)
+      |                ^~
+hashmap.c:144:20: error: comparison between pointer and integer [-Werror]
+  144 |   if(map->capacity == NULL)
+      |                    ^~
+cc1: all warnings being treated as errors
+Compilation failed
+7a96a1d
